@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">PomodoroSample</string>
+    <string name="title_activity_task">TaskActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="RegisterSuccessful">Register Successful</string>
+    <string name="RegisterFailed">Register Failed(username > 4 charactor and password >6 charactor)</string>
+    <string name="LoginSuccessful">Login Successful</string>
+    <string name="LoginFailed">Your username or password is not correct</string>
 </resources>

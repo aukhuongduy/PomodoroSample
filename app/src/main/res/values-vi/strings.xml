@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PomodoroSample</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="navigation_drawer_close"></string>
+    <string name="password">Mật Khẩu</string>
+    <string name="username">Tên Đăng Nhập</string>
+    <string name="RegisterSuccessful">Đăng ký thành công</string>
+    <string name="LoginFailed">Tài khoản hoặc mật khảu của bạn không chính xác</string>
+    <string name="LoginSuccessful">Đăng nhập thành công</string>
+    <string name="RegisterFailed">Đăng ký thất bại</string>
+    <string name="login">Đăng nhập</string>
+    <string name="register">Đăng ký</string>
+</resources>
