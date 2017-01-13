@@ -4,43 +4,136 @@
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context="com.example.khuongduy.pomodorosample.activities.LoginActivity">
 
+    <SearchView
+        android:id="@+id/svSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></SearchView>
+    <TextView
+        android:id="@+id/tvSearch"
+        android:textAlignment="center"
+        android:hint="Search some thing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     <ImageView
-        android:layout_gravity="center"
-        android:src="@drawable/icon256"
-        android:layout_width="200dp"
-        android:layout_height="200dp" />
+        android:id="@+id/imLogo"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center" />
 
     <EditText
         android:id="@+id/et_username"
-        android:hint="@string/username"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="@string/username" />
+
     <EditText
         android:id="@+id/et_password"
-        android:hint="@string/password"
-        android:inputType="textPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+    <RatingBar
+        android:layout_gravity="center"
+        android:id="@+id/rtbPasswordStrong"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:numStars="5"
+        android:rating="0"
+        android:isIndicator="false"
+        style="@style/foodRatingBar"
+        />
 
     <LinearLayout
-        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
         <Button
-            android:text="@string/register"
+            android:id="@+id/bt_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bt_register"/>
+            android:text="@string/register" />
+
+
         <Button
-            android:text="@string/login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/bt_login"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <CheckBox
+            android:id="@+id/cbAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Admin or not? " />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#000" />
+
+        <Spinner
+            android:id="@+id/spLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minWidth="120dp"></Spinner>
+    </LinearLayout>
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+            <RadioButton
+                android:id="@+id/rbtTomato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tomato" />
+
+            <RadioButton
+                android:id="@+id/rbtOrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orange" />
+
+            <RadioButton
+                android:id="@+id/rbtApple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apple" />
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/sbTime"
+            android:max="100"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="0"
+            android:textAlignment="center"
+            android:id="@+id/tvTime"
+            android:minWidth="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
 
 </LinearLayout>
