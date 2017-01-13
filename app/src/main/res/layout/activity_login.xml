@@ -20,8 +20,8 @@
         android:layout_height="wrap_content" />
     <ImageView
         android:id="@+id/imLogo"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center" />
 
     <EditText
@@ -36,16 +36,28 @@
         android:layout_height="wrap_content"
         android:hint="@string/password"
         android:inputType="textPassword" />
-    <RatingBar
-        android:layout_gravity="center"
-        android:id="@+id/rtbPasswordStrong"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
-        android:numStars="5"
-        android:rating="0"
-        android:isIndicator="false"
-        style="@style/foodRatingBar"
-        />
+        android:layout_height="wrap_content">
+
+        <RatingBar
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/rtbPasswordStrong"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:numStars="5"
+            android:rating="0"
+            android:isIndicator="false"
+            style="@style/foodRatingBar"
+            />
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="22dp"
+            android:layout_height="22dp" />
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -133,6 +145,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
+    <ProgressBar
+        android:id="@+id/pbHorizontal"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 

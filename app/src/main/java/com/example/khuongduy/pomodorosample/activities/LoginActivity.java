@@ -6,6 +6,7 @@ import android.nfc.Tag;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ProgressBar;
 import android.widget.SearchView;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -44,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     private CheckBox cbAdmin;
     private TextView tvTime;
     private TextView tvSearch;
+    private ProgressBar pbDown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,6 +151,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 tvTime.setText(Integer.toString(progress));
+                pbDown.setProgress(progress);
+                
             }
 
             @Override
@@ -177,6 +181,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void setReference() {
+        pbDown = (ProgressBar) this.findViewById(R.id.pbHorizontal);
         svSearch = (SearchView) this.findViewById(R.id.svSearch);
         tvSearch = (TextView) this.findViewById(R.id.tvSearch);
         tvTime = (TextView) this.findViewById(R.id.tvTime);
